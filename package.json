@@ -1,0 +1,45 @@
+{
+  "name": "everything-has-a-home",
+  "version": "1.0.0",
+  "description": "A gamified catalog app for people with ADHD to help organize belongings and reduce clutter",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "npx serve .",
+    "dev": "npx live-server .",
+    "build": "echo 'No build process needed for vanilla HTML/CSS/JS'",
+    "deploy": "echo 'Ready for deployment to any static hosting service'"
+  },
+  "keywords": [
+    "adhd",
+    "organization",
+    "decluttering", 
+    "productivity",
+    "gamification",
+    "catalog",
+    "inventory",
+    "accessibility"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/everything-has-a-home.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/everything-has-a-home/issues"
+  },
+  "homepage": "https://github.com/yourusername/everything-has-a-home#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "serve": "^14.2.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "not dead"
+  ]
+}

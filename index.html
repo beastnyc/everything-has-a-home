@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everything Has a Home</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="phone-container">
+        <div class="screen">
+            <!-- Main Home Screen -->
+            <div id="main-screen">
+                <div class="header">
+                    <div class="status-bar">
+                        <div class="time">9:41</div>
+                        <div class="battery">100% 🔋</div>
+                    </div>
+                    <div class="app-title">Everything Has a Home</div>
+                    <div class="tagline">Find homes for your homeless things ✨</div>
+                </div>
+                
+                <div class="main-content">
+                    <!-- Location-based reminder -->
+                    <div class="notification-card">
+                        <div class="notification-content">
+                            <div class="notification-icon">🏠</div>
+                            <div class="notification-text">Welcome home! Put away your daily items?</div>
+                        </div>
+                        <div class="notification-buttons">
+                            <button class="done-button">✨ Done</button>
+                            <button class="skip-button">Later</button>
+                        </div>
+                    </div>
+                    
+                    <div class="main-actions">
+                        <div class="action-card primary" onclick="showHomelessScreen()">
+                            <div class="action-header">
+                                <div class="action-icon">📦</div>
+                                <div class="action-title">I have something homeless</div>
+                            </div>
+                            <div class="action-subtitle">Take a photo and I'll help you find it the perfect home</div>
+                        </div>
+                        
+                        <div class="action-card secondary">
+                            <div class="action-header">
+                                <div class="action-icon">🔍</div>
+                                <div class="action-title">Where did I put...?</div>
+                            </div>
+                            <div class="action-subtitle">Search for items that already have homes</div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-section">
+                        <div class="section-title">Your Daily Items</div>
+                        <div class="progress-item">
+                            <div class="progress-left">
+                                <div class="progress-icon">🔑</div>
+                                <div class="progress-text">Keys</div>
+                            </div>
+                            <div class="progress-status status-done">Hook by door</div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-left">
+                                <div class="progress-icon">👛</div>
+                                <div class="progress-text">Wallet</div>
+                            </div>
+                            <div class="progress-status status-done">Tray on dresser</div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-left">
+                                <div class="progress-icon">📱</div>
+                                <div class="progress-text">Phone charger</div>
+                            </div>
+                            <div class="progress-status status-needs-home">Needs a home</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bottom-indicator">
+                    Swipe up for recently homeless items
+                </div>
+            </div>
+            
+            <!-- Homeless Item Screen -->
+            <div id="homeless-screen" class="hidden">
+                <div class="homeless-screen">
+                    <button class="back-button" onclick="showMainScreen()">
+                        ← Back to home
+                    </button>
+                    
+                    <div class="photo-area" onclick="takePhoto()">
+                        <div class="photo-placeholder">📷</div>
+                        <div class="photo-title">Take a photo of your homeless item</div>
+                        <div class="photo-subtitle">Tap anywhere to use your camera</div>
+                    </div>
+                    
+                    <div class="coach-questions">
+                        <div class="section-title">Let's find this a home!</div>
+                        
+                        <div class="question">
+                            <div class="question-text">How often do you use this?</div>
+                            <div class="question-options">
+                                <div class="option-button" onclick="selectOption(this)">Daily</div>
+                                <div class="option-button" onclick="selectOption(this)">Weekly</div>
+                                <div class="option-button" onclick="selectOption(this)">Monthly</div>
+                                <div class="option-button" onclick="selectOption(this)">Rarely</div>
+                            </div>
+                        </div>
+                        
+                        <div class="question">
+                            <div class="question-text">Where do you usually use it?</div>
+                            <div class="question-options">
+                                <div class="option-button" onclick="selectOption(this)">Kitchen</div>
+                                <div class="option-button" onclick="selectOption(this)">Bedroom</div>
+                                <div class="option-button" onclick="selectOption(this)">Living room</div>
+                                <div class="option-button" onclick="selectOption(this)">Office/Desk</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="suggestion-box">
+                        <div class="suggestion-title">💡 Perfect Home Found!</div>
+                        <div class="suggestion-text">
+                            Since you use this daily in the kitchen, I suggest:<br>
+                            <strong>"The drawer next to your stove"</strong>
+                        </div>
+                        <button class="create-home-button">✨ Create This Home</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
